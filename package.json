@@ -1,0 +1,16 @@
+{
+  "name": "NodeSWSub",
+  "version": "0.0.0",
+  "description": "NodeSWSub",
+  "main": "app.js",
+  "author": {
+    "name": "SyntaxC4",
+    "email": ""
+  },
+  "dependencies": {
+   "azure":"*",
+   "commander": "*",
+   "socket.io": "*",
+   "ws": "*"
+  }
+}

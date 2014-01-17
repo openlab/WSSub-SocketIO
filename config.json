@@ -1,0 +1,5 @@
+﻿{
+	"sbConnectionString":"Endpoint=sb://fanometer.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=RUK5f0rSFkgQ0o3M31Wddx92ybASX2PLvyMh9R7PTTE=",
+	"sbTopic": "seahawks",
+	"sbSubscription": "WebSocket"
+}
