@@ -14,16 +14,31 @@ program
 var loop = setInterval(function() {
     sbService.receiveSubscriptionMessage(config.sbTopic, config.sbSubscription, function(error, receivedMessage) {
 
-        console.log('Message received');
+        if(error) {
+            console.error(error);
+            return;
+        }
+
+        console.log('Message received -->');
+
+        var msg = receivedMessage;
+        //console.log(msg);
+        //var msgjson = JSON.parse(msg);
+        //var msgbody = msgjson.body;
+        msgbody = msg.body;
+        //console.log("CORY IS AWESOME !");
+        //console.log(msgbody);
+
+        var copy = new Buffer(msgbody);
+        console.log(copy);
 
         wss.on('connection', function(ws) {
+            console.log(' ');
             console.log('sending message...');
-            ws.send(receivedMessage.body);
+            ws.send(copy);
             console.log('message sent');
         });
     
-        if(error) {
-            console.error(error);
-        }
+
     });
 }, 5);
