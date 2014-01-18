@@ -15,7 +15,7 @@ var serviceBusService = azure.createServiceBusService(config.sbConnectionString)
 var currentSockets = [];
 
 app.configure(function() {
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 3000);
   app.engine('mustache', hogan);
   app.set('view engine', 'mustache');
   app.set('layout', __dirname + '/views/layout');
