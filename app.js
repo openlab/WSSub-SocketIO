@@ -72,7 +72,7 @@ function getMessage() {
     serviceBusService.receiveSubscriptionMessage(config.sbTopic, config.sbSubscription, function(error, receivedMessage) {
       if(!error) {
         for(var i = currentSockets.length - 1; i >= 0; i--) {
-          console.log("[" + i + "] writing " + receivedMessage.body );
+        console.log("[" + i + "] writing " + receivedMessage.body );
          var copy = new Buffer(receivedMessage.body);
 
           currentSockets[i].emit('fromServer', {
