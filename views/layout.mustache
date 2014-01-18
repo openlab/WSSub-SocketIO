@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Fan-o-Meter v2</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap-responsive.min.css">
+
+        <link rel="stylesheet" href="/stylesheets/style.css">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+
+        <style type="text/css">
+        html, select {
+            font : 10px arial,sans-serif;
+        }
+        .CanvasDiv {
+        }
+        .StartTimeDiv {
+            border : none;
+            text-align : left;
+        }
+        .EndTimeDiv {
+            border : none;
+            text-align : right;
+        }
+        .StationTable, td {
+            border : 1px solid black;
+            border-collapse : collapse;
+        }
+        .StaTitleDiv {
+            font : 10px arial,sans-serif;
+        }
+        .TimeTable {
+            width : 100%;
+            border : none;
+            font : 9px arial,sans-serif;
+            border-collapse : collapse;
+        }
+        .StaTitleDiv {
+            background-color : #000055;
+            color : white;
+            text-align : center;
+        }
+        .plug {
+            font : 9px arial,sans-serif;
+        }
+        h1 {
+            font : 14px arial,sans-serif;
+            font-weight : bold;
+        }
+    </style>
+
+	</head>
+	<body onload="initialize()">
+
+        <h1>PNSN Realtime Seismic Trace Display</h1>
+        <div>
+        Time Interval for each channel is 5 minutes
+        </div>
+        <hr>
+        <div id="CanvasDiv">
+        </div>
+        <div class="plug">Streaming data from PNSN using WebSWave<br>
+        Delay from realtime is about 4 seconds.</div>
+
+		 <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="row-fluid">
+                    	<div class="span6">
+                            <h2 class="title">Fan-o-Meter v2</h2>
+                        </div>
+                        <div class="span6">
+                            
+                        </div>
+                    </div>
+                    <!--end row-fluid-->
+                </div>
+            </div>
+        </div>
+          <div class="container main"> 
+		{{{yield}}}
+	</div>
+
+	</body>
+
+
+</html>

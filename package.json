@@ -1,6 +1,6 @@
 {
   "name": "NodeSWSub",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "NodeSWSub",
   "main": "app.js",
   "author": {
@@ -8,9 +8,11 @@
     "email": ""
   },
   "dependencies": {
-   "azure":"*",
-   "commander": "*",
+   "express": "3.0.6",
+   "hogan-express": "*",
    "socket.io": "*",
-   "ws": "*"
+   "newrelic":"*",
+   "ws": "*",
+   "azure":"*"
   }
 }
